@@ -1,0 +1,3 @@
+curl --location 'http://localhost:3001/api/livros' \
+--header 'Authorization: ••••••' \
+--data ''
