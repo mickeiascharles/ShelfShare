@@ -1,7 +1,0 @@
-curl --location 'http://localhost:3001/api/usuarios/cadastro' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "nome": "Testando API 2",
-    "email": "teste2.api@teste.com",
-    "senha": "teste2"
-}'
