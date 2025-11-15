@@ -1,0 +1,89 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  color: #ffffff;
+}
+
+.title {
+  color: #ffdd88;
+  border-bottom: 1px solid #ffdd88;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.loading,
+.error,
+.empty {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.bookCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 221, 136, 0.2);
+}
+
+.bookCardContent {
+  padding: 20px;
+  color: #000000;
+}
+
+.bookCardContent h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.bookCardContent p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.bookCardContent .author {
+  font-style: italic;
+  color: #555;
+}
+
+.bookCard button {
+  width: 100%;
+  background-color: #ffdd88;
+  color: #000000;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookCard button:hover {
+  background-color: #f7d06e;
+}
