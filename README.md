@@ -1,5 +1,5 @@
 <div align="center">
-    <img height="200cm" src="/logo-preto.png"/>
+    <img height="200cm" src="/Logo Branco Oficial.png"/>
 </div>
 
 # ShelfShare
