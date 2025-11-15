@@ -2,8 +2,6 @@
     <img height="200cm" src="/Logo branco oficial.png"/>
 </div>
 
-# ShelfShare
-
 Projeto desenvolvido para a matéria de **Teste de Software** da **Universidade Católica de Brasília**.
 
 <br>
