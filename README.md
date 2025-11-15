@@ -147,7 +147,7 @@ JWT_SECRET=kovucke
 npm start
 ```
 O servidor estará rodando em `http://localhost:3001.` Mantenha este terminal aberto.
-* Configurando o Frontend:
+### Configurando o Frontend:
   <br> Abra um novo terminal;
   <br> Navegue até a pasta do frontend:
 ```bash
