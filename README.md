@@ -2,17 +2,17 @@
     <img height="200cm" src="/Logo branco oficial.png"/>
 </div>
 
-Projeto desenvolvido para a matéria de **Teste de Software** da **Universidade Católica de Brasília**.
-
+<br>
+Projeto desenvolvido para a matéria de Teste de Software.
 <br>
 
-## 1. Resumo do projeto
+## Resumo do projeto
 
 **ShelfShare** é uma plataforma digital para o compartilhamento e empréstimo de livros entre usuários. A aplicação foi desenhada para funcionar como uma "biblioteca" comunitária, onde usuários podem disponibilizar livros que já leram e solicitar o empréstimo de títulos de outros membros da comunidade.
 
 O projeto foi construído com o objetivo principal de servir como um sistema completo para a aplicação prática de metodologias de teste de software.
 
-## 2. Funcionalidades Principais
+## Funcionalidades Principais
 
 * **Autenticação de Usuários:** Sistema completo de cadastro e login de usuários, utilizando `bcrypt` para hashing de senhas e **JSON Web Tokens (JWT)** para gerenciamento de sessões seguras.
 * **Gerenciamento de Livros ("Meus Livros"):** Usuários autenticados podem cadastrar seus próprios livros (com título, autor, etc.) na plataforma, que ficam listados em sua página de perfil.
@@ -23,7 +23,7 @@ O projeto foi construído com o objetivo principal de servir como um sistema com
     * Se qualquer etapa falhar, a transação inteira é revertida (`ROLLBACK`) para garantir a integridade dos dados (evitando que um livro seja emprestado duas vezes).
 * **Interface Reativa:** O frontend em React atualiza a interface do usuário em tempo real, removendo um livro da lista de "Disponíveis" imediatamente após a solicitação ser bem-sucedida, sem a necessidade de recarregar a página.
 
-## 3. Arquitetura e Tecnologia
+## Arquitetura e Tecnologia
 
 O projeto é construído sobre uma arquitetura de cliente-servidor (Frontend/Backend) separada.
 
@@ -41,7 +41,7 @@ O projeto é construído sobre uma arquitetura de cliente-servidor (Frontend/Bac
 * **React Router DOM** para gerenciar a navegação entre as páginas (Login, Cadastro, Dashboard, etc.).
 * **Axios** para gerenciar todas as requisições HTTP para a API do backend.
 
-## 4. Foco em Teste de Software
+## Foco em Teste de Software
 
 O objetivo principal deste projeto foi aplicar um ciclo completo de testes, incluindo:
 
