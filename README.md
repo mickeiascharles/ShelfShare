@@ -50,7 +50,7 @@ O objetivo principal deste projeto foi aplicar um ciclo completo de testes, incl
 * **Testes de Interface (Robot Framework + Selenium):** Scripts automatizados para simular o fluxo do usuário no frontend (abrir o navegador, preencher formulários, clicar em botões e validar resultados).
 * **Testes de Carga e Estresse (JMeter):** Usados para medir o desempenho da API de cadastro, simulando 50 usuários (carga) e 500 usuários (estresse) para encontrar o ponto de quebra do sistema.
 
-## 5. Tecnologias Envolvidas
+## Tecnologias Envolvidas
 
 <div>
     <img height="35cm" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"/>
@@ -65,16 +65,16 @@ O objetivo principal deste projeto foi aplicar um ciclo completo de testes, incl
 </div>
 <br>
 
-## 6. Como Fazer para Rodar no Seu Sistema
+## Como Fazer para Rodar no Seu Sistema
 
 Este projeto é dividido em duas partes (Backend e Frontend) e requer um banco de dados MySQL.
 
-### 1. Pré-requisitos
+### Pré-requisitos
 * **Node.js (v18+):** [Baixe aqui](https://nodejs.org/)
 * **Git:** [Baixe aqui](https://git-scm.com/)
 * **MySQL:** Você precisa de um servidor MySQL rodando. O **MySQL Workbench** é recomendado: [Baixe aqui](https://dev.mysql.com/downloads/workbench/)
 
-### 2. Clonando o Repositório
+### Clonando o Repositório
 ```bash
 # Clone o repositório (substitua pela URL do seu repo)
 git clone [https://github.com/mickeiascharles/ShelfShare.git](https://github.com/mickeiascharles/ShelfShare.git)
