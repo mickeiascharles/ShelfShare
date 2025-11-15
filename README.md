@@ -81,3 +81,83 @@ git clone [https://github.com/mickeiascharles/ShelfShare.git](https://github.com
 
 # Entre na pasta do projeto
 cd ShelfShare
+```
+### Configurando o Backend
+* Navegue até a pasta do backend:
+```bash
+cd shelfshare-backend
+```
+* Instale as dependências:
+```bash
+npm install
+```
+* Configure o Banco de Dados (MySQL):
+  <br> Abra o MySQL Workbench e crie um novo schema (banco de dados) chamado shelfshare.
+```sql
+USE shelfshare;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    pontos INT DEFAULT 10,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE livros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_dono INT NOT NULL,
+    titulo VARCHAR(200) NOT NULL,
+    autor VARCHAR(150) NOT NULL,
+    isbn VARCHAR(20),
+    status ENUM('disponivel', 'emprestado') DEFAULT 'disponivel',
+    FOREIGN KEY (id_dono) REFERENCES usuarios(id)
+);
+
+CREATE TABLE emprestimos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_livro INT NOT NULL,
+    id_solicitante INT NOT NULL,
+    id_dono INT NOT NULL,
+    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_devolucao_prevista DATE NOT NULL,
+    data_devolucao_real DATE,
+    status ENUM('solicitado', 'aceito', 'devolvido', 'atrasado') DEFAULT 'solicitado',
+    FOREIGN KEY (id_livro) REFERENCES livros(id),
+    FOREIGN KEY (id_solicitante) REFERENCES usuarios(id),
+    FOREIGN KEY (id_dono) REFERENCES usuarios(id)
+);
+```
+* Configure as Variáveis de Ambiente:
+  <br> Crie um arquivo chamado `.env` na raiz da pasta shelfshare-backend.
+  <br> Cole o conteúdo abaixo e substitua com suas credenciais do MySQL:
+```Ini,TOML
+# Configuração do Banco de Dados
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=sua_senha_do_mysql_aqui_se_tiver
+DB_NAME=shelfshare
+
+# Chave Secreta para o JWT
+JWT_SECRET=kovucke
+```
+* Inicie o Servidor Backend:
+```bash
+npm start
+```
+O servidor estará rodando em `http://localhost:3001.` Mantenha este terminal aberto.
+* Configurando o Frontend:
+  <br> Abra um novo terminal;
+  <br> Navegue até a pasta do frontend:
+```bash
+cd shelfshare-frontend
+```
+* Instale as dependências:
+```bash
+npm install
+```
+* Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
